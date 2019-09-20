@@ -1,0 +1,303 @@
+/*
+  Name: Bao Nguyen
+  Section: CSE 154 AC
+  Date: 4/28/2019
+  This CSS file would style the trivia website
+*/
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Alfa+Slab+One|Lato');
+
+body {
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  padding: 0;
+  /*
+  CSS repeating radical gradient created by Geoff Graham
+  adjusted to personal fit.
+  source code is found at: https://css-tricks.com/snippets/css/css-repeating-gradients/
+  */
+  background:
+    repeating-radial-gradient(circle at center,
+    #4286f4,
+    #FF69B4 70px) fixed;
+}
+
+h1 {
+  text-align: left;
+  font-size: 130px;
+  margin-left: 20px;
+  /*
+ text background image rules created by Preethi, adjusted to personal fit
+ source code is found at https://css-tricks.com/css-techniques-and-effects-for-knockout-text/
+ */
+  background: url("img/starexplodes.jpg") bottom 250px right 200px;
+  /* This image is found at https://images.newscientist.com/wp-content/uploads/2018/03/26151541/gettyimages-584484540-800x533.jpg */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+form button {
+  margin-left: auto;
+  width: 30%;
+}
+
+footer p {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  width: 90px;
+  background-color: #FF8C00;
+  border: none;
+}
+
+input {
+  width: 200px;
+}
+
+footer {
+  top: 90%;
+}
+
+/*
+  blue border removed when clicked created by Ronen Cypis
+  source code is found here: https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
+*/
+button:focus {
+  outline: 0;
+}
+
+form button .auth-label {
+  margin-top: 20px;
+}
+
+h1, #time {
+  font-family: 'Bungee Shade', cursive;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+body, #score-bar, #answer, #buttons, #auth {
+  display: flex;
+}
+
+body, #score-bar button, #submit-btn {
+  font-family: 'Lato', sans-serif;
+}
+
+form button, #start-btn {
+  margin-right: auto;
+}
+
+button, #score-bar {
+  height: 50px;
+}
+
+button, #question {
+  font-size: 20px;
+}
+
+.answers {
+  margin-right: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.answers, #start {
+  font-size: 25px;
+}
+
+#buttons button {
+  background: none;
+  outline: none;
+}
+
+#score-bar, #score-bar button {
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#content, #score-bar p {
+  position: relative;
+}
+
+#score-bar p:first-of-type {
+  left: 200px;
+}
+
+#score-bar p:nth-of-type(2) {
+  left: 250px;
+}
+
+#score-bar p:last-of-type {
+  color: gold;
+  left: 350px;
+}
+
+footer, #submit-btn, #skip-btn {
+  position: absolute;
+}
+
+/*
+  gradient color created by Chris Coyier, adjusted for personal fit
+  source code is found at: https://css-tricks.com/gradient-borders-in-css/
+*/
+#game-board {
+  width: 800px;
+  display: grid;
+  height: 550px;
+  background: linear-gradient(to right, #FF4500, #8A2BE2);
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+}
+
+#time {
+  font-size: 200px;
+  color: green;
+  text-align: center;
+  margin-top: 0;
+}
+
+#score-bar {
+  background-color: #FF6347;
+}
+
+#content {
+  height: 500px;
+}
+
+#content, #check-msg {
+  background-color: white;
+}
+
+#submit-btn, #skip-btn {
+  bottom: 0;
+}
+
+#submit-btn {
+  padding: 5px;
+  color: white;
+  left: 45%;
+  background-color: #4248f4;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  box-shadow: 2px 5px grey;
+  margin-bottom: 6px;
+}
+
+/*
+ button animation created by w3schools
+ source code is found at: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3
+*/
+#submit-btn:hover, #submit-btn:active {
+  background-color: #185ECE;
+}
+
+/*
+ button animation created by w3schools
+ source code is found at: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3
+*/
+#submit-btn:active {
+  box-shadow: 2px 3px gold;
+  transform: translate(2px, 2px);
+}
+
+#skip-btn {
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  right: 0;
+  background-color: #DDA0DD;
+}
+
+#start-btn {
+  display: block;
+  border-radius: 50px;
+  height: 100px;
+  color: #FF8C00;
+  font-family: 'Alfa Slab One', cursive;
+  background: url("img/startimg.jpg") center;
+  /*this image is found at https://render.fineartamerica.com/images/images-new-artwork/images/artworkimages/medium/1/palm-print-lauren-amelia-hughes.jpg */
+  margin-top: 82px;
+  margin-left: 370px;
+}
+
+#submit-btn, #start-btn {
+  width: 100px;
+}
+
+#answer, #auth {
+  flex-direction: column;
+}
+
+#answer, #buttons {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+#auth-view-wrapper, #question {
+  padding: 10px;
+}
+
+#auth-view, #check-msg {
+  padding: 20px;
+}
+
+#intro {
+  /*
+  text in middle rules created by paislee, adjusted to personal fit
+  source code is found at: https://stackoverflow.com/questions/10707253/css-full-screen-div-with-text-in-the-middle
+  */
+  width: 1000px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -420px;
+  margin-top: -180px;
+}
+
+#answer {
+  border-top: 2px solid orange;
+  padding-top: 100px;
+}
+
+#check-msg {
+  align-self: center;
+  width: 300px;
+  height: 60px;
+  border: 3px purple solid;
+}
+
+#auth {
+  margin-top: 100px;
+}
+
+#buttons {
+  justify-content: space-evenly;
+}
+
+/*
+  gradient color created by Chris Coyier, adjusted for personal fit
+  source code is found at: https://css-tricks.com/gradient-borders-in-css/
+*/
+#auth-view-wrapper {
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(to right, #FDE47C, #32FF7A,
+    #2FCBE0);
+}
+
+#auth-view {
+  height: 410px;
+  background-color: #EEF0F2;
+}
+
+#register-btn {
+  margin-top: 30px;
+}

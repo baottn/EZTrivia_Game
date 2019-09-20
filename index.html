@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+  Name: Bao Nguyen
+  Section: CSE 154 AC
+  Date: 5/1/2019
+  This page would let user play the EZTrivia game with random questions retrieved from
+  Jservice.io .The timer and the score bar of this game are inspired by
+  the set homework assignment. Bootstrap is used for styling some of the elements on this page,
+  source code for Bootstrap can be found here: https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+  The animation of this page is created by anime.js, the source code for anime.js can be
+  found here: https://animejs.com/documentation
+-->
+<html lang="en">
+  <head>
+    <title>EZTrivia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="anime.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="auth-view-wrapper">
+      <section id="auth-view">
+        <div id="buttons">
+          <button id="register">Register</button>
+          <button id="login">Login</button>
+        </div>
+        <form id="auth">
+          <label for="username" class="auth-label">Username</label>
+          <input type="text" name="username" id="username" required>
+          <label for="password" class="auth-label">Password</label>
+          <input type="password" name="password" required>
+          <button id="register-btn" class="btn btn-outline-success">Join!</button>
+        </form>
+      </section>
+    </div>
+    <section id="intro" class="hidden">
+      <header>
+        <h1>EZTrivia</h1>
+      </header>
+      <button id="start-btn">Start!</button>
+    </section>
+
+    <section id="game" class="hidden">
+      <p id="time">00:00</p>
+      <article id="game-board">
+        <article id="score-bar">
+          <button id="quit-btn">Quit</button>
+          <p>Score: <span id="score">0</span></p>
+          <p>Max Score: <span id="max-score">0</span></p>
+          <p>this.score = <span id="this-score">0</span></p>
+        </article>
+        <article id="content">
+          <article id="question">
+            <p></p>
+          </article>
+          <article id="answer">
+          </article>
+          <button id="submit-btn">Submit</button>
+          <button id="skip-btn">Skip</button>
+        </article>
+      </article>
+    </section>
+
+    <section id="check-msg" class="hidden">
+      <p id="msg"></p>
+    </section>
+
+    <footer>
+      <p>EZTrivia game &copy; 2019 Bao Nguyen</p>
+      <p>Questions and answers of this trivia game came from jservice.io</p>
+    </footer>
+  </body>
+</html>
